@@ -14,7 +14,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 players_list = ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5", "Player 6"]
-SHEET_URL = "https://docs.google.com/spreadsheets/d/1O1A0kF4rxf-oxoyTYCyeMFGXCCMi-GpURSjH7U8_ACY/edit"
+SHEET_URL = "https://docs.google.com/spreadsheets/d/1diInnvyrSaJGnCZ3FHK51s-AiKHXJzW9bT30ZXzVpf0/edit"
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 # Initialize Session States
