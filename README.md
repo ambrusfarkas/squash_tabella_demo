@@ -3,58 +3,31 @@ Demo of Squash Tabella webapp
 <img width="1526" height="771" alt="image" src="https://github.com/user-attachments/assets/f1713567-70e5-4e27-a1e6-ed83c672a2f9" />
 
 
-🏸 Squash Leaderboard & Analytics Dashboard
+🏸 **Squash Leaderboard & Analytics Dashboard**
 
-Live Demo: Play the App Here
-Source Code: View Repository
-Overview
+[Live Demo](https://squash-tabella-demo.streamlit.app/)
 
-A full-stack web application developed to track, analyze, and visualize match data for a private squash league. This project replaces manual scorekeeping with a fully automated, cloud-synced solution. It demonstrates end-to-end data pipeline management, algorithmic feature engineering, and interactive data visualization.
+[Source Code](https://github.com/ambrusfarkas/squash_tabella_demo)
+
+A full-stack web application developed to track, analyze, and visualize match data for a private squash league. This project replaces manual scorekeeping with a fully automated, cloud-synced solution. While built for a recreational sport, the underlying architecture mirrors enterprise data solutions, demonstrating end-to-end data pipeline management, custom algorithm development, and interactive data visualization.
 ✨ Key Features
 
-    Algorithmic Ranking System: Implements a dynamic Elo rating system (using a K-factor of 32) that automatically calculates and updates player rankings based on match outcomes.  
+    Algorithmic Ranking System: Implements a dynamic Elo rating system that automatically calculates and updates player rankings based on match outcomes[cite: 3].
 
-    Cloud Backend Integration: Utilizes the Google Sheets API (via streamlit-gsheets) to seamlessly read, record, and update match data in real-time without requiring a traditional SQL database.  
+    Cloud Backend Integration: Utilizes the Google Sheets API to seamlessly read, record, and update match data in real-time without requiring a traditional SQL database[cite: 3].
 
-    Interactive Data Visualization: Generates dynamic Elo rating history line charts using the Altair library, allowing users to track player progression over a timeline of matches.  
+    Interactive Data Visualization: Generates dynamic Elo rating history line charts using the Altair library, allowing users to track player progression over a timeline of matches[cite: 3].
 
-    Advanced Head-to-Head Analytics: Provides deep 1v1 rivalry statistics, calculating win rates, average point differentials, and "Match Stakes" (predicting potential Elo gains or losses prior to a match).  
+    Advanced Head-to-Head Analytics: Provides deep 1v1 rivalry statistics, calculating win rates, average point differentials, and predicting potential Elo gains/losses prior to a match[cite: 3].
 
-    Outlier Detection: Automatically parses historical data to identify significant match events, highlighting "Biggest Blowouts" and close "Nail-biters".  
-
-    In-App Data Management: Features an integrated data editor that allows users to directly modify and sync the records of the last 10 matches to the cloud backend.  
+    In-App Data Management: Features an integrated data editor that allows users to directly modify and sync recent match records to the cloud backend[cite: 3].
 
 🛠️ Tech Stack
 
-    Frontend & Framework: Streamlit, Python  
+    Frontend & Framework: Python, Streamlit[cite: 3]
 
-    Data Manipulation: Pandas  
+    Data Manipulation: Pandas[cite: 3]
 
-    Data Visualization: Altair  
+    Data Visualization: Altair[cite: 3]
 
-    Database / API: Google Sheets API (GSheetsConnection)  
-
-🚀 How to Run Locally
-
-To run this dashboard on your local machine, follow these steps:
-
-    Clone the repository:
-    Bash
-
-    git clone https://github.com/ambrusfarkas/squash_tabella_demo.git
-    cd squash_tabella_demo
-
-    Install the required dependencies:
-    (Ensure you have a requirements.txt file in your repo containing streamlit, pandas, altair, and st-gsheets-connection)
-    Bash
-
-    pip install -r requirements.txt
-
-    Run the Streamlit app:
-    Bash
-
-    streamlit run app.py
-
-📊 Why This Project Matters
-
-While built for a recreational sports league, the underlying architecture mirrors enterprise data solutions. It involves ETL (Extract, Transform, Load) processes from a cloud source, custom algorithm development, and the creation of an interactive, user-facing dashboard designed to turn raw data into actionable insights.
+    Database Integration: Google Sheets API (streamlit-gsheets)
