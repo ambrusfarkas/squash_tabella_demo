@@ -3,7 +3,7 @@
 **A leaderboard & analytics dashboard for a private squash league** — built with Streamlit, powered by a live Elo rating engine and synced to Google Sheets in real time.
 
 ![Squash Tabella dashboard preview](https://github.com/user-attachments/assets/f1713567-70e5-4e27-a1e6-ed83c672a2f9)
-<img width="1568" height="775" alt="image" src="https://github.com/user-attachments/assets/0e2bcaef-6ee5-44f0-8d2a-0778b1495eac" />
+<img width="1519" height="770" alt="image" src="https://github.com/user-attachments/assets/e431ecf9-d992-4a8c-9658-d113cf414fa9" />
 
 [**🔴 Live Demo**](https://squash-tabella-demo.streamlit.app/) · [**Source Code**](https://github.com/ambrusfarkas/squash_tabella_demo)
 
