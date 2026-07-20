@@ -1,36 +1,45 @@
-# squash_tabella_demo
-Demo of Squash Tabella webapp
-<img width="1526" height="771" alt="image" src="https://github.com/user-attachments/assets/f1713567-70e5-4e27-a1e6-ed83c672a2f9" />
+# 🏸 Squash Tabella
 
+**A leaderboard & analytics dashboard for a private squash league** — built with Streamlit, powered by a live Elo rating engine and synced to Google Sheets in real time.
 
-🏸 **Squash Leaderboard & Analytics Dashboard**
+![Squash Tabella dashboard preview](https://github.com/user-attachments/assets/f1713567-70e5-4e27-a1e6-ed83c672a2f9)
 
-[Live Demo](https://squash-tabella-demo.streamlit.app/)
+[**🔴 Live Demo**](https://squash-tabella-demo.streamlit.app/) · [**Source Code**](https://github.com/ambrusfarkas/squash_tabella_demo)
 
-[Source Code](https://github.com/ambrusfarkas/squash_tabella_demo)
+---
 
-Overview
+## Overview
 
-A full-stack web application developed to track, analyze, and visualize match data for a private squash league. This project replaces manual scorekeeping with a fully automated, cloud-synced solution. While built for a recreational sport, the underlying architecture mirrors enterprise data solutions, demonstrating end-to-end data pipeline management, custom algorithm development, and interactive data visualization.
+Squash Tabella replaces manual scorekeeping with a fully automated, cloud-synced dashboard. Built for a recreational league, it mirrors the architecture of enterprise data tools — an end-to-end pipeline covering data ingestion, custom algorithms, and interactive visualization.
 
-✨ Key Features
+## ✨ Features
 
-* Algorithmic Ranking System: Implements a dynamic Elo rating system that automatically calculates and updates player rankings based on match outcomes[cite: 3].
+- **🔮 Dynamic Elo Ratings** — automatically recalculates rankings after every match
+- **☁️ Cloud-Synced Backend** — reads and writes match data live via the Google Sheets API (no SQL database needed)
+- **📈 Elo History Charts** — interactive Altair line charts tracking player progression over time
+- **⚔️ Head-to-Head Analytics** — win rates, point differentials, and predicted Elo swings for any 1v1 matchup
+- **📝 In-App Data Editing** — add or correct recent matches directly from the dashboard, synced instantly
 
-* Cloud Backend Integration: Utilizes the Google Sheets API to seamlessly read, record, and update match data in real-time without requiring a traditional SQL database[cite: 3].
+## 🛠️ Tech Stack
 
-* Interactive Data Visualization: Generates dynamic Elo rating history line charts using the Altair library, allowing users to track player progression over a timeline of matches[cite: 3].
+| Layer | Technology |
+|---|---|
+| Frontend / App | [Streamlit](https://streamlit.io/) |
+| Data Manipulation | [Pandas](https://pandas.pydata.org/) |
+| Visualization | [Altair](https://altair-viz.github.io/) |
+| Backend / Storage | Google Sheets API ([streamlit-gsheets](https://github.com/streamlit/gsheets-connector)) |
 
-* Advanced Head-to-Head Analytics: Provides deep 1v1 rivalry statistics, calculating win rates, average point differentials, and predicting potential Elo gains/losses prior to a match[cite: 3].
+## 🚀 Getting Started
 
-* In-App Data Management: Features an integrated data editor that allows users to directly modify and sync recent match records to the cloud backend[cite: 3].
+```bash
+git clone https://github.com/ambrusfarkas/squash_tabella_demo.git
+cd squash_tabella_demo
+pip install -r requirements.txt
+streamlit run app.py
+```
 
-🛠️ Tech Stack
+You'll need a Google Sheet connected via `streamlit-gsheets` — see [Streamlit's GSheets connection docs](https://docs.streamlit.io/develop/tutorials/databases/private-gsheet) for setup.
 
-* Frontend & Framework: Python, Streamlit[cite: 3]
+## 📄 License
 
-* Data Manipulation: Pandas[cite: 3]
-
-* Data Visualization: Altair[cite: 3]
-
-* Database Integration: Google Sheets API (streamlit-gsheets)
+MIT
